@@ -80,7 +80,7 @@ class FeedEntry extends Component {
               className="faceRectangle"
               onMouseEnter={this.hoverHandler}
               style={{
-                top: this.props.photo.faceRectangle.topLeftY + 'px',
+                top: (this.props.photo.faceRectangle.topLeftY - 15) + 'px',
                 left: this.props.photo.faceRectangle.topLeftX + 'px',
                 width: this.props.photo.faceRectangle.width + 'px',
                 height: this.props.photo.faceRectangle.height + 'px'
@@ -95,7 +95,7 @@ class FeedEntry extends Component {
                 onClick={this.tagClickHandler}
                 style={{
                   top: (this.props.photo.faceRectangle.topLeftY + this.props.photo.faceRectangle.height) + 'px',
-                  left: (this.props.photo.faceRectangle.topLeftX + (this.props.photo.faceRectangle.width / 4)) + 'px'
+                  left: (this.props.photo.faceRectangle.topLeftX) + 'px'
                 }}
               >
                 {this.props.photo.tag_name.full_name}
